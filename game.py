@@ -1,3 +1,4 @@
+"""Main execute file for maze game."""
 import turtle
 from constants import BLOCK_PIXEL_SIZE
 import utl

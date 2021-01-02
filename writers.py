@@ -1,24 +1,27 @@
-from constants import BLOCK_PIXEL_SIZE
+"""File with implementation of StartWriter and EndWriter classes."""
 import turtle
+from constants import BLOCK_PIXEL_SIZE
 
 
 class StartWriter(turtle.Turtle):
-    def __init__(self, MAZE_SIZE):
+    """A class to write informations for the player at the start of the game."""
+    def __init__(self, maze_size):
         turtle.Turtle.__init__(self)
-        self.MAZE_BORDER = ((MAZE_SIZE - 1) // 2) * BLOCK_PIXEL_SIZE
+        self.maze_border = ((maze_size - 1) // 2) * BLOCK_PIXEL_SIZE
         self.color("orange")
         self.penup()
         self.hideturtle()
         self.speed(0)
-        self.goto(-self.MAZE_BORDER, self.MAZE_BORDER+BLOCK_PIXEL_SIZE)
+        self.goto(-self.maze_border, self.maze_border+BLOCK_PIXEL_SIZE)
 
 
 class EndWriter(turtle.Turtle):
-    def __init__(self, MAZE_SIZE):
+    """A class to write informations for the player at the end of the game."""
+    def __init__(self, maze_size):
         turtle.Turtle.__init__(self)
-        self.MAZE_BORDER = ((MAZE_SIZE - 1) // 2) * BLOCK_PIXEL_SIZE
+        self.maze_border = ((maze_size - 1) // 2) * BLOCK_PIXEL_SIZE
         self.color("red")
         self.penup()
         self.hideturtle()
         self.speed(0)
-        self.goto(-self.MAZE_BORDER, -self.MAZE_BORDER-(BLOCK_PIXEL_SIZE * 2))
+        self.goto(-self.maze_border, -self.maze_border-(BLOCK_PIXEL_SIZE * 2))
