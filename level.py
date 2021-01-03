@@ -4,7 +4,7 @@ import utl
 
 class Level:
     """
-    A class to represent a level of the game.
+    A class to represent a level of the     game.
     Generates random maze, treasures, end points etc.
     """
     def __init__(self, maze_size):
